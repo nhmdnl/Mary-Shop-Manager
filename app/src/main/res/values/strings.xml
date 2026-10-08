@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Mary Shop</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_parties">Parties</string>
+    <string name="nav_inventory">Inventory</string>
+    <string name="nav_quick_sale">Quick Sale</string>
+    <string name="nav_more">More</string>
+
+    <!-- Settings & Tools -->
+    <string name="title_settings_tools">Settings &amp; Tools</string>
+    <string name="btn_lock_now">Lock Now</string>
+    <string name="msg_processing_saf">Processing database file...</string>
+    <string name="section_business_profile">Business Profile</string>
+    <string name="label_contact">Contact</string>
+    <string name="btn_edit">Edit</string>
+    <string name="label_sales_tax_vat">Sales Tax &amp; VAT</string>
+    <string name="status_enabled">Enabled</string>
+    <string name="label_applied_to_sales">applied to sales</string>
+    <string name="status_tax_disabled">Tax disabled (0%)</string>
+    <string name="btn_configure">Configure</string>
+    <string name="section_security_access">Security &amp; Access</string>
+    <string name="label_4digit_pin_lock">4-Digit Security PIN</string>
+    <string name="status_pin_active">App protected with PIN</string>
+    <string name="status_pin_disabled">No PIN protection</string>
+    <string name="btn_change_pin">Change PIN</string>
+    <string name="section_display_theme">Display &amp; Appearance</string>
+    <string name="label_color_theme">Color Theme</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light Mode</string>
+    <string name="theme_dark">Dark Mode</string>
+    <string name="section_language">Language</string>
+    <string name="label_app_language">App Language</string>
+    <string name="language_system_default">System Default</string>
+    <string name="section_backup_restore">Database Backup &amp; Restore</string>
+    <string name="title_saf_database_management">Storage Access Framework (SAF)</string>
+    <string name="desc_saf_backup_restore">Export your complete SQLite database to a user-chosen backup file on device or cloud drive, or restore an existing backup file.</string>
+    <string name="btn_backup_now">Backup Database</string>
+    <string name="btn_restore_now">Restore Database</string>
+    <string name="section_currency_pref">Currency Preferences</string>
+    <string name="label_default_currency">Default Currency</string>
+    <string name="desc_currency_exact_ledger">All ledger amounts stored as exact Long values</string>
+    <string name="section_stock_controls">Stock &amp; Inventory Controls</string>
+    <string name="label_allow_negative_stock">Allow Negative Stock</string>
+    <string name="desc_negative_stock_allowed">Allowed: Sales and stock reductions can drive stock below zero</string>
+    <string name="desc_negative_stock_strict">Strict: Stock cannot go below zero (sales out blocked when empty)</string>
+    <string name="section_reports_statements">Reports &amp; Statements</string>
+    <string name="title_business_reports">Business Reports &amp; Exports</string>
+    <string name="desc_reports_features">Sales, Product Profit, PDF Statements &amp; Debt Aging</string>
+    <string name="section_demo_testing">Demo &amp; Testing Data</string>
+    <string name="btn_reset_demo_data">Reset Demo Data</string>
+    <string name="desc_demo_data">Restores sample customers, suppliers with ledger transactions, and sample products for testing.</string>
+    <string name="title_offline_local">100% Offline Local Storage</string>
+    <string name="desc_offline_local">Mary Shop runs entirely on-device using a Room SQLite database. It requires zero internet connection and is optimized for low-end Android phones.</string>
+    <string name="title_edit_shop_profile">Edit Shop Profile</string>
+    <string name="label_shop_name">Shop Name</string>
+    <string name="label_phone_number">Owner Phone Number</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="label_enable_sales_tax">Enable Sales Tax / VAT</string>
+    <string name="label_tax_percentage">Tax Percentage</string>
+    <string name="desc_tax_calculation">Tax will be calculated on discounted sales subtotals and itemized on PDF receipts.</string>
+    <string name="dialog_restore_confirm_title">Restore Database?</string>
+    <string name="dialog_restore_confirm_desc">Restoring a database will completely overwrite all current shop records, customers, inventory, and sales history. Make sure you have backed up current data before proceeding.</string>
+    <string name="btn_select_backup_file">Select Backup File</string>
+    <string name="dialog_reset_confirm_title">Reset Sample Data?</string>
+    <string name="dialog_reset_confirm_desc">This will reload 5 customers, 3 suppliers, and 15 products with stock movements.</string>
+    <string name="btn_reset_now">Reset Now</string>
+
+    <!-- PIN Screen -->
+    <string name="pin_enter_title">Enter 4-digit PIN</string>
+    <string name="pin_incorrect">Incorrect PIN. Try again.</string>
+    <string name="pin_setup_title">Set 4-Digit Security PIN</string>
+    <string name="pin_change_title">Change Security PIN</string>
+    <string name="pin_disable_title">Disable Security PIN</string>
+    <string name="pin_current_label">Current 4-Digit PIN</string>
+    <string name="pin_new_label">New 4-Digit PIN</string>
+    <string name="pin_confirm_label">Confirm 4-Digit PIN</string>
+
+    <!-- General Common -->
+    <string name="common_delete">Delete</string>
+    <string name="common_confirm">Confirm</string>
+    <string name="common_total">Total</string>
+    <string name="common_subtotal">Subtotal</string>
+    <string name="common_discount">Discount</string>
+    <string name="common_tax">Tax</string>
+    <string name="common_balance">Balance</string>
+    <string name="common_cash">Cash</string>
+    <string name="common_credit">Credit</string>
+    <string name="common_notes">Notes</string>
+    <string name="common_date">Date</string>
+
+    <!-- Barcode Scanner -->
+    <string name="scanner_title">Scan Barcode / SKU</string>
+    <string name="scanner_subtitle">Align barcode inside the target box</string>
+    <string name="scanner_manual_fallback">Manual SKU Entry (Fallback)</string>
+    <string name="scanner_permission_required">Camera Access Required</string>
+    <string name="scanner_permission_desc">To scan barcodes using CameraX &amp; ML Kit, Mary Shop needs camera permission. You can also enter the SKU manually.</string>
+</resources>
+

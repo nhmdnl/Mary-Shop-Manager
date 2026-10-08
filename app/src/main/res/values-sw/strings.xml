@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Duka la Mary</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashibodi</string>
+    <string name="nav_parties">Wateja na Wauzaji</string>
+    <string name="nav_inventory">Bidhaa na Hisa</string>
+    <string name="nav_quick_sale">Mauzo ya Haraka</string>
+    <string name="nav_more">Zaidi</string>
+
+    <!-- Settings & Tools -->
+    <string name="title_settings_tools">Mipangilio na Zana</string>
+    <string name="btn_lock_now">Funga Sasa</string>
+    <string name="msg_processing_saf">Inashughulikia faili ya hifadhidata...</string>
+    <string name="section_business_profile">Wasifu wa Biashara</string>
+    <string name="label_contact">Mawasiliano</string>
+    <string name="btn_edit">Hariri</string>
+    <string name="label_sales_tax_vat">Kodi ya Mauzo na VAT</string>
+    <string name="status_enabled">Imewashwa</string>
+    <string name="label_applied_to_sales">inatumika kwenye mauzo</string>
+    <string name="status_tax_disabled">Kodi imezimwa (0%)</string>
+    <string name="btn_configure">Sanidi</string>
+    <string name="section_security_access">Usalama na Ufikiaji</string>
+    <string name="label_4digit_pin_lock">PIN ya Usalama ya Nambari 4</string>
+    <string name="status_pin_active">Programu imelindwa na PIN</string>
+    <string name="status_pin_disabled">Hakuna ulinzi wa PIN</string>
+    <string name="btn_change_pin">Badilisha PIN</string>
+    <string name="section_display_theme">Mwonekano na Mandhari</string>
+    <string name="label_color_theme">Mandhari ya Rangi</string>
+    <string name="theme_system">Chaguo-msingi la Mfumo</string>
+    <string name="theme_light">Hali ya Mwangaza</string>
+    <string name="theme_dark">Hali ya Giza</string>
+    <string name="section_language">Lugha</string>
+    <string name="label_app_language">Lugha ya Programu</string>
+    <string name="language_system_default">Chaguo-msingi la Mfumo</string>
+    <string name="section_backup_restore">Kuhifadhi na Kurejesha Hifadhidata</string>
+    <string name="title_saf_database_management">Mfumo wa Ufikiaji Hifadhi (SAF)</string>
+    <string name="desc_saf_backup_restore">Hamisha hifadhidata yako kamili ya SQLite kwenye faili iliyochaguliwa kwenye kifaa au wingu, au rejesha hifadhidata iliyopo.</string>
+    <string name="btn_backup_now">Hifadhi Nakala</string>
+    <string name="btn_restore_now">Rejesha Hifadhidata</string>
+    <string name="section_currency_pref">Mapendeleo ya Sarafu</string>
+    <string name="label_default_currency">Sarafu Chaguomsingi</string>
+    <string name="desc_currency_exact_ledger">Kiasi chote cha leja kinahifadhiwa kwa usahihi</string>
+    <string name="section_stock_controls">Udhibiti wa Hisa na Bidhaa</string>
+    <string name="label_allow_negative_stock">Ruhusu Hisa Hasi</string>
+    <string name="desc_negative_stock_allowed">Inaruhusiwa: Mauzo yanaweza kupunguza hisa chini ya sifuri</string>
+    <string name="desc_negative_stock_strict">Madhubuti: Hisa haiwezi kushuka chini ya sifuri</string>
+    <string name="section_reports_statements">Ripoti na Taarifa</string>
+    <string name="title_business_reports">Ripoti za Biashara na Usafirishaji</string>
+    <string name="desc_reports_features">Mauzo, Faida ya Bidhaa, Taarifa za PDF na Madeni</string>
+    <string name="section_demo_testing">Data ya Majaribio na Mfano</string>
+    <string name="btn_reset_demo_data">Weka Upya Data ya Mfano</string>
+    <string name="desc_demo_data">Hurejesha wateja na wauzaji wa mfano na bidhaa kwa majaribio.</string>
+    <string name="title_offline_local">Hifadhi ya Kifaa ya 100% Nje ya Mtandao</string>
+    <string name="desc_offline_local">Mary Shop inafanya kazi kwenye kifaa chako bila mtandao kwa kutumia SQLite ya Room.</string>
+    <string name="title_edit_shop_profile">Hariri Wasifu wa Duka</string>
+    <string name="label_shop_name">Jina la Duka</string>
+    <string name="label_phone_number">Nambari ya Simu ya Mmiliki</string>
+    <string name="btn_save">Hifadhi</string>
+    <string name="btn_cancel">Ghairi</string>
+    <string name="label_enable_sales_tax">Wezesha Kodi ya Mauzo / VAT</string>
+    <string name="label_tax_percentage">Asilimia ya Kodi</string>
+    <string name="desc_tax_calculation">Kodi itahesabiwa kwa mauzo na kuonyeshwa kwenye risiti za PDF.</string>
+    <string name="dialog_restore_confirm_title">Rejesha Hifadhidata?</string>
+    <string name="dialog_restore_confirm_desc">Kurejesha hifadhidata kutafuta rekodi zote zilizopo za duka, wateja, hisa na mauzo. Hakikisha umefanya nakala ya sasa kabla ya kuendelea.</string>
+    <string name="btn_select_backup_file">Chagua Faili ya Nakala</string>
+    <string name="dialog_reset_confirm_title">Weka Upya Data ya Mfano?</string>
+    <string name="dialog_reset_confirm_desc">Hii itapakia upya wateja 5, wauzaji 3 na bidhaa 15 na mienendo ya hisa.</string>
+    <string name="btn_reset_now">Weka Upya Sasa</string>
+
+    <!-- PIN Screen -->
+    <string name="pin_enter_title">Weka PIN ya nambari 4</string>
+    <string name="pin_incorrect">PIN si sahihi. Jaribu tena.</string>
+    <string name="pin_setup_title">Weka PIN ya Usalama ya Nambari 4</string>
+    <string name="pin_change_title">Badilisha PIN ya Usalama</string>
+    <string name="pin_disable_title">Zima PIN ya Usalama</string>
+    <string name="pin_current_label">PIN ya Sasa ya Nambari 4</string>
+    <string name="pin_new_label">PIN Mpya ya Nambari 4</string>
+    <string name="pin_confirm_label">Thibitisha PIN Mpya</string>
+
+    <!-- General Common -->
+    <string name="common_delete">Futa</string>
+    <string name="common_confirm">Thibitisha</string>
+    <string name="common_total">Jumla</string>
+    <string name="common_subtotal">Jumla Ndogo</string>
+    <string name="common_discount">Punguzo</string>
+    <string name="common_tax">Kodi</string>
+    <string name="common_balance">Salio</string>
+    <string name="common_cash">Pesa Taslimu</string>
+    <string name="common_credit">Mkopo</string>
+    <string name="common_notes">Maelezo</string>
+    <string name="common_date">Tarehe</string>
+
+    <!-- Barcode Scanner -->
+    <string name="scanner_title">Skani Msimbo Pau / SKU</string>
+    <string name="scanner_subtitle">Weka msimbo pau ndani ya kisanduku</string>
+    <string name="scanner_manual_fallback">Kuingiza SKU kwa Mkono (Mbadala)</string>
+    <string name="scanner_permission_required">Ruhusa ya Kamera Inahitajika</string>
+    <string name="scanner_permission_desc">Kuskani misimbo pau kwa CameraX na ML Kit, Mary Shop inahitaji ruhusa ya kamera. Unaweza pia kuandika SKU kwa mkono.</string>
+</resources>
+
