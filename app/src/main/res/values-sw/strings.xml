@@ -48,9 +48,9 @@
     <string name="section_reports_statements">Ripoti na Taarifa</string>
     <string name="title_business_reports">Ripoti za Biashara na Usafirishaji</string>
     <string name="desc_reports_features">Mauzo, Faida ya Bidhaa, Taarifa za PDF na Madeni</string>
-    <string name="section_demo_testing">Data ya Majaribio na Mfano</string>
-    <string name="btn_reset_demo_data">Weka Upya Data ya Mfano</string>
-    <string name="desc_demo_data">Hurejesha wateja na wauzaji wa mfano na bidhaa kwa majaribio.</string>
+    <string name="section_demo_testing">Futa na Weka Upya Data</string>
+    <string name="btn_reset_demo_data">Futa Data Zote za Duka</string>
+    <string name="desc_demo_data">Hufuta orodha ya wateja, bidhaa na rekodi zote za mauzo ili kuanza na duka tupu kwa majaribio yako.</string>
     <string name="title_offline_local">Hifadhi ya Kifaa ya 100% Nje ya Mtandao</string>
     <string name="desc_offline_local">Mary Shop inafanya kazi kwenye kifaa chako bila mtandao kwa kutumia SQLite ya Room.</string>
     <string name="title_edit_shop_profile">Hariri Wasifu wa Duka</string>
@@ -64,9 +64,9 @@
     <string name="dialog_restore_confirm_title">Rejesha Hifadhidata?</string>
     <string name="dialog_restore_confirm_desc">Kurejesha hifadhidata kutafuta rekodi zote zilizopo za duka, wateja, hisa na mauzo. Hakikisha umefanya nakala ya sasa kabla ya kuendelea.</string>
     <string name="btn_select_backup_file">Chagua Faili ya Nakala</string>
-    <string name="dialog_reset_confirm_title">Weka Upya Data ya Mfano?</string>
-    <string name="dialog_reset_confirm_desc">Hii itapakia upya wateja 5, wauzaji 3 na bidhaa 15 na mienendo ya hisa.</string>
-    <string name="btn_reset_now">Weka Upya Sasa</string>
+    <string name="dialog_reset_confirm_title">Futa Data Zote za Duka?</string>
+    <string name="dialog_reset_confirm_desc">Una uhakika unataka kufuta wateja wote, wasambazaji, bidhaa na miamala yote? Hatua hii haiwezi kurudishwa nyuma.</string>
+    <string name="btn_reset_now">Futa Kila Kitu Sasa</string>
 
     <!-- PIN Screen -->
     <string name="pin_enter_title">Weka PIN ya nambari 4</string>

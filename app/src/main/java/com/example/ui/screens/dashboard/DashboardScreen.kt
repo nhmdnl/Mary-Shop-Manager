@@ -89,7 +89,8 @@ fun DashboardScreen(
     onNavigateToParty: (Long) -> Unit,
     onNavigateToPartiesList: () -> Unit,
     onNavigateToReports: () -> Unit = {},
-    onNavigateToSale: () -> Unit = {}
+    onNavigateToSale: () -> Unit = {},
+    onNavigateToInventory: () -> Unit = {}
 ) {
     val summary by viewModel.summary.collectAsStateWithLifecycle()
     val currency by viewModel.currency.collectAsStateWithLifecycle()
@@ -150,15 +151,6 @@ fun DashboardScreen(
                             contentDescription = "View Reports"
                         )
                     }
-                    IconButton(
-                        onClick = { viewModel.resetDemoData() },
-                        modifier = Modifier.testTag("reset_demo_data_button")
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Refresh,
-                            contentDescription = "Reset Demo Data"
-                        )
-                    }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface
@@ -173,6 +165,72 @@ fun DashboardScreen(
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+            // Empty State Welcome Card (displayed when shop has no records yet)
+            if (summary.totalCustomerCount == 0 && summary.totalSupplierCount == 0 && summary.recentTransactions.isEmpty()) {
+                item {
+                    Card(
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f)),
+                        shape = RoundedCornerShape(16.dp),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .testTag("dashboard_welcome_empty_card")
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(18.dp),
+                            verticalArrangement = Arrangement.spacedBy(10.dp)
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Store,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.primary,
+                                    modifier = Modifier.size(24.dp)
+                                )
+                                Text(
+                                    text = "Ready For Your Testing Data",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onPrimaryContainer
+                                )
+                            }
+                            Text(
+                                text = "Your shop is completely clean with no mock data. Start by adding your first product, registering a customer, or recording a counter sale.",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.85f)
+                            )
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Button(
+                                    onClick = onNavigateToInventory,
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .testTag("welcome_add_product_button")
+                                ) {
+                                    Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                    Text("Add Product")
+                                }
+                                OutlinedButton(
+                                    onClick = { showAddPartyDialog = true },
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .testTag("welcome_add_customer_button")
+                                ) {
+                                    Icon(Icons.Default.Group, contentDescription = null, modifier = Modifier.size(16.dp))
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                    Text("Add Party")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             // 1. Today's Performance Section (Sales, Cash In, Cash Out, Profit)
             item {
                 TodayPerformanceSection(
@@ -202,7 +260,8 @@ fun DashboardScreen(
             item {
                 InventoryValuationSection(
                     summary = summary,
-                    currency = currency
+                    currency = currency,
+                    onInventoryClick = onNavigateToInventory
                 )
             }
 
@@ -223,7 +282,8 @@ fun DashboardScreen(
                     onNewSale = onNavigateToSale,
                     onViewReports = onNavigateToReports,
                     onAddParty = { showAddPartyDialog = true },
-                    onViewParties = onNavigateToPartiesList
+                    onViewParties = onNavigateToPartiesList,
+                    onViewInventory = onNavigateToInventory
                 )
             }
 
@@ -743,11 +803,13 @@ fun TodayPerformanceSection(
 @Composable
 fun InventoryValuationSection(
     summary: DashboardSummary,
-    currency: String
+    currency: String,
+    onInventoryClick: () -> Unit = {}
 ) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
+            .clickable(onClick = onInventoryClick)
             .testTag("inventory_valuation_card"),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f)),
         shape = RoundedCornerShape(16.dp)
@@ -873,7 +935,8 @@ fun QuickActionsBar(
     onNewSale: () -> Unit = {},
     onViewReports: () -> Unit = {},
     onAddParty: () -> Unit,
-    onViewParties: () -> Unit
+    onViewParties: () -> Unit,
+    onViewInventory: () -> Unit = {}
 ) {
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -896,18 +959,18 @@ fun QuickActionsBar(
             }
 
             Button(
-                onClick = onViewReports,
+                onClick = onViewInventory,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.tertiary
+                    containerColor = MaterialTheme.colorScheme.secondary
                 ),
                 modifier = Modifier
                     .weight(1f)
                     .height(48.dp)
-                    .testTag("dashboard_view_reports_button")
+                    .testTag("dashboard_view_inventory_button")
             ) {
-                Icon(Icons.Default.Assessment, contentDescription = null, modifier = Modifier.size(18.dp))
+                Icon(Icons.Default.Inventory2, contentDescription = null, modifier = Modifier.size(18.dp))
                 Spacer(modifier = Modifier.width(6.dp))
-                Text("Reports")
+                Text("Inventory")
             }
         }
 

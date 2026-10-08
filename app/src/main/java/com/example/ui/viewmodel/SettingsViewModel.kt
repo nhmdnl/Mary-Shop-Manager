@@ -146,11 +146,15 @@ class SettingsViewModel(
         }
     }
 
-    fun resetDemoData() {
+    fun clearAllData() {
         viewModelScope.launch {
-            repository.resetToSampleData()
-            _statusMessage.value = "Demo data reset successfully (5 Customers, 3 Suppliers & 15 Products with Movements)"
+            repository.clearAllData()
+            _statusMessage.value = "All shop data cleared. Ready for your test records."
         }
+    }
+
+    fun resetDemoData() {
+        clearAllData()
     }
 }
 

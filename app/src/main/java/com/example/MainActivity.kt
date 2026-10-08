@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.data.local.AppDatabase
 import com.example.ui.navigation.MaryShopApp
 import com.example.ui.theme.MyApplicationTheme
 import java.util.Locale
@@ -62,6 +63,12 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        // Ensure Room SQLite WAL transactions are fully flushed to disk when the tablet sleeps or backgrounded
+        AppDatabase.checkpointDatabase()
     }
 }
 

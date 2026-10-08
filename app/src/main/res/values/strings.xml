@@ -48,9 +48,9 @@
     <string name="section_reports_statements">Reports &amp; Statements</string>
     <string name="title_business_reports">Business Reports &amp; Exports</string>
     <string name="desc_reports_features">Sales, Product Profit, PDF Statements &amp; Debt Aging</string>
-    <string name="section_demo_testing">Demo &amp; Testing Data</string>
-    <string name="btn_reset_demo_data">Reset Demo Data</string>
-    <string name="desc_demo_data">Restores sample customers, suppliers with ledger transactions, and sample products for testing.</string>
+    <string name="section_demo_testing">Clear &amp; Reset Data</string>
+    <string name="btn_reset_demo_data">Clear All Shop Data</string>
+    <string name="desc_demo_data">Deletes all customer ledgers, inventory, and sales records so you can start with a fresh, empty shop.</string>
     <string name="title_offline_local">100% Offline Local Storage</string>
     <string name="desc_offline_local">Mary Shop runs entirely on-device using a Room SQLite database. It requires zero internet connection and is optimized for low-end Android phones.</string>
     <string name="title_edit_shop_profile">Edit Shop Profile</string>
@@ -64,9 +64,9 @@
     <string name="dialog_restore_confirm_title">Restore Database?</string>
     <string name="dialog_restore_confirm_desc">Restoring a database will completely overwrite all current shop records, customers, inventory, and sales history. Make sure you have backed up current data before proceeding.</string>
     <string name="btn_select_backup_file">Select Backup File</string>
-    <string name="dialog_reset_confirm_title">Reset Sample Data?</string>
-    <string name="dialog_reset_confirm_desc">This will reload 5 customers, 3 suppliers, and 15 products with stock movements.</string>
-    <string name="btn_reset_now">Reset Now</string>
+    <string name="dialog_reset_confirm_title">Clear All Shop Data?</string>
+    <string name="dialog_reset_confirm_desc">Are you sure you want to delete all customers, suppliers, inventory products, and sales transactions? This action cannot be undone.</string>
+    <string name="btn_reset_now">Clear Everything</string>
 
     <!-- PIN Screen -->
     <string name="pin_enter_title">Enter 4-digit PIN</string>

@@ -274,6 +274,14 @@ fun SalesScreen(
                                         showCustomerMenu = false
                                     }
                                 )
+                                DropdownMenuItem(
+                                    leadingIcon = { Icon(Icons.Default.Add, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
+                                    text = { Text("+ Add New Customer", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold) },
+                                    onClick = {
+                                        showCustomerMenu = false
+                                        onNavigateToParties()
+                                    }
+                                )
                                 allCustomers.forEach { customer ->
                                     DropdownMenuItem(
                                         text = {
@@ -389,7 +397,8 @@ fun SalesScreen(
                     // Product Quick-Add List (Horizontal Cards)
                     if (filteredProducts.isEmpty()) {
                         Text(
-                            text = "No products found matching '$searchQuery'",
+                            text = if (searchQuery.isNotBlank()) "No products found matching '$searchQuery'"
+                            else "No products in inventory yet. Add products in the Inventory tab to start selling.",
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.padding(vertical = 8.dp)

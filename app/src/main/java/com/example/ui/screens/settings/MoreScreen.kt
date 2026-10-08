@@ -27,6 +27,7 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Inventory2
 import androidx.compose.material.icons.filled.Language
@@ -832,14 +833,14 @@ fun MoreScreen(
                     Button(
                         onClick = { showResetConfirmDialog = true },
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = MaterialTheme.colorScheme.secondary
+                            containerColor = MaterialTheme.colorScheme.error
                         ),
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(48.dp)
-                            .testTag("reset_demo_sample_button")
+                            .testTag("clear_all_data_button")
                     ) {
-                        Icon(Icons.Default.Refresh, contentDescription = null)
+                        Icon(Icons.Default.Delete, contentDescription = null)
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(stringResource(R.string.btn_reset_demo_data))
                     }
@@ -1052,7 +1053,7 @@ fun MoreScreen(
             confirmButton = {
                 Button(
                     onClick = {
-                        viewModel.resetDemoData()
+                        viewModel.clearAllData()
                         showResetConfirmDialog = false
                     },
                     colors = ButtonDefaults.buttonColors(containerColor = DebtRed)

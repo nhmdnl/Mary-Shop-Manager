@@ -38,10 +38,4 @@ class DashboardViewModel(
             started = SharingStarted.WhileSubscribed(5000),
             initialValue = "Mary Shop"
         )
-
-    fun resetDemoData() {
-        viewModelScope.launch {
-            repository.resetToSampleData()
-        }
-    }
 }

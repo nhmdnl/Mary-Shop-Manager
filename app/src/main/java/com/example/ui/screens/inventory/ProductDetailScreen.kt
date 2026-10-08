@@ -1,5 +1,6 @@
 package com.example.ui.screens.inventory
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -84,6 +85,8 @@ fun ProductDetailScreen(
     viewModel: ProductDetailViewModel,
     onNavigateBack: () -> Unit
 ) {
+    BackHandler(onBack = onNavigateBack)
+
     val itemWithSupplier by viewModel.productWithSupplier.collectAsStateWithLifecycle()
     val movements by viewModel.movements.collectAsStateWithLifecycle()
     val priceHistory by viewModel.priceHistory.collectAsStateWithLifecycle()

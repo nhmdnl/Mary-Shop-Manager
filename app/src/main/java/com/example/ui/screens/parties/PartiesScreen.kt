@@ -30,6 +30,7 @@ import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Button
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -226,10 +227,21 @@ fun PartiesScreen(
                         Spacer(modifier = Modifier.height(12.dp))
                         Text(
                             text = if (searchQuery.isNotBlank()) "No parties found matching \"$searchQuery\""
-                            else "No parties in this category",
+                            else "No customers or suppliers added yet",
                             style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
+                        if (searchQuery.isBlank()) {
+                            Spacer(modifier = Modifier.height(16.dp))
+                            Button(
+                                onClick = { showAddDialog = true },
+                                modifier = Modifier.testTag("empty_state_add_party_button")
+                            ) {
+                                Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(18.dp))
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Text("Add Customer / Supplier")
+                            }
+                        }
                     }
                 }
             } else {

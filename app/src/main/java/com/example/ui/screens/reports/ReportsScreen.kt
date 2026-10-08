@@ -1,6 +1,7 @@
 package com.example.ui.screens.reports
 
 import android.app.DatePickerDialog
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -110,6 +111,8 @@ fun ReportsScreen(
     onNavigateBack: () -> Unit,
     onNavigateToParty: (Long) -> Unit = {}
 ) {
+    BackHandler(onBack = onNavigateBack)
+
     val context = LocalContext.current
     val selectedTab by viewModel.selectedTab.collectAsStateWithLifecycle()
     val dateRange by viewModel.dateRange.collectAsStateWithLifecycle()

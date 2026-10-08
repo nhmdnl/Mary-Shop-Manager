@@ -168,6 +168,14 @@ fun MaryShopApp() {
                             }
                             launchSingleTop = true
                         }
+                    },
+                    onNavigateToInventory = {
+                        navController.navigate(Screen.Inventory.route) {
+                            popUpTo(navController.graph.findStartDestination().id) {
+                                saveState = true
+                            }
+                            launchSingleTop = true
+                        }
                     }
                 )
             }
